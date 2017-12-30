@@ -84,12 +84,21 @@ public class Login extends javax.swing.JFrame {
         btnsalir = new javax.swing.JButton();
         usuario = new javax.swing.JTextField();
         contraseña = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(395, 50));
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Nombre usuario");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(149, 76, 110, 14);
+        jLabel1.getAccessibleContext().setAccessibleName("Nombre Usuario");
+        jLabel1.getAccessibleContext().setAccessibleDescription("");
 
         jLabel2.setText("Contraseña");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(149, 143, 100, 14);
 
         btnentrar.setText("Entrar");
         btnentrar.addActionListener(new java.awt.event.ActionListener() {
@@ -97,6 +106,8 @@ public class Login extends javax.swing.JFrame {
                 btnentrarActionPerformed(evt);
             }
         });
+        getContentPane().add(btnentrar);
+        btnentrar.setBounds(43, 233, 63, 23);
 
         btnsalir.setText("Salir");
         btnsalir.addActionListener(new java.awt.event.ActionListener() {
@@ -104,57 +115,28 @@ public class Login extends javax.swing.JFrame {
                 btnsalirActionPerformed(evt);
             }
         });
+        getContentPane().add(btnsalir);
+        btnsalir.setBounds(269, 233, 53, 23);
 
         usuario.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 usuarioKeyReleased(evt);
             }
         });
+        getContentPane().add(usuario);
+        usuario.setBounds(140, 96, 132, 20);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(btnentrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
-                .addComponent(btnsalir)
-                .addGap(78, 78, 78))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
-                            .addComponent(contraseña))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnentrar)
-                    .addComponent(btnsalir))
-                .addGap(44, 44, 44))
-        );
+        contraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contraseñaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(contraseña);
+        contraseña.setBounds(140, 168, 132, 20);
 
-        jLabel1.getAccessibleContext().setAccessibleName("Nombre Usuario");
-        jLabel1.getAccessibleContext().setAccessibleDescription("");
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\hpere\\Desktop\\Ferreteria\\ferreteria\\Ferreteria\\xl3.jpg")); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 420, 370);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -254,6 +236,10 @@ public class Login extends javax.swing.JFrame {
         usuario.setText(usuario.getText().toUpperCase());        // TODO add your handling code here:
     }//GEN-LAST:event_usuarioKeyReleased
 
+    private void contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contraseñaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -295,6 +281,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField contraseña;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }
