@@ -30,6 +30,13 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        
+        this.setSize(410, 500);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        this.setIconImage(new ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/logo.png")).getImage());
+        this.setTitle("ACCESO - SISTEMA FERRETERIA");
+        
     }
 
     
@@ -41,7 +48,7 @@ public class Login extends javax.swing.JFrame {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setIconImage(new ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/logo.png")).getImage());
-        this.setTitle("ACCESO - SISTEMA ENRAMADA SALAS (SIENSA)");
+        this.setTitle("ACCESO - SISTEMA ENRAMADA FERRETERIA");
         setProgress(20, "Conectandose a la Base de Datos...");
         setProgress(40, "Cargando Modulos..");
         setProgress(60, "Carga de Modulos Terminada");
@@ -170,6 +177,79 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnentrarActionPerformed
 
+     conecta cc = new conecta();
+    Connection cn = cc.conexion();
+    
+     public void Ingresa(String id, String pas) {
+        String dato = null;
+        try {
+            String sql = "SELECT nombre_us FROM usuarios WHERE nombre_us = '" + id + "'";
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.first()) {
+                String sql1 = "SELECT pass FROM usuarios WHERE pass = '" + pas + "'";
+                Statement st1 = cn.createStatement();
+                ResultSet rs1 = st1.executeQuery(sql1);
+                if (rs1.first()) {
+                    String sql2 = "SELECT tipo_us FROM usuarios WHERE nombre_us = '" + id + "'"
+                            + " and pass = '" + pas + "'";
+                    Statement st2 = cn.createStatement();
+                    ResultSet rs2 = st2.executeQuery(sql2);
+                    while (rs2.next()) {
+                        dato = rs2.getString(1);
+                    }
+
+                    if (dato.equals("ADMINISTRADOR")) {
+
+                        String sql3 = "SELECT nombre_us FROM usuarios WHERE nombre_us = '" + id + "'";
+                        Statement st3 = cn.createStatement();
+                        ResultSet rs3 = st3.executeQuery(sql3);
+                        while (rs3.next()) {
+                            dato = rs3.getString(1);
+                        }
+                        dispose();
+                        //MenuPrincipalAd mp = new MenuPrincipalAd();
+                        JOptionPane.showMessageDialog(this, "BIENVENIDO A SIENSA " + dato, "Administrador", 0,
+                                new ImageIcon(getClass().getResource("/imagenes/principal/adm.png")));
+                        //mp.userConect.setText(dato);
+                        //mp.setVisible(true);
+
+                    } else {
+
+                        String sql3 = "SELECT nombre_us FROM usuarios WHERE nombre_us = '" + id + "'";
+                        Statement st3 = cn.createStatement();
+                        ResultSet rs3 = st3.executeQuery(sql3);
+                        while (rs3.next()) {
+                            dato = rs3.getString(1);
+                        }
+                        dispose();
+                        //MenuPrincipalNor mp = new MenuPrincipalNor();
+                        JOptionPane.showMessageDialog(this, "BIENVENIDO A SIENSA " + dato, "Normal", 0,
+                                new ImageIcon(getClass().getResource("/imagenes/principal/norm.png")));
+                        //mp.userConect.setText(dato);
+                        //mp.setVisible(true);
+
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(this, "Contraseña incorrecta", "Acceso", 0,
+                            new ImageIcon(getClass().getResource("/imagenes/principal/passLogin.png")));
+                    this.contraseña.setText("");
+                    this.usuario.transferFocus();
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "No existe éste usuario.", "Acceso", 0,
+                        new ImageIcon(getClass().getResource("/imagenes/principal/userLogin.png")));
+                this.usuario.setText("");
+                this.jLabel1.transferFocus();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+     
+    
+    
     private void usuarioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usuarioKeyReleased
         usuario.setText(usuario.getText().toUpperCase());        // TODO add your handling code here:
     }//GEN-LAST:event_usuarioKeyReleased

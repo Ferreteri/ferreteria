@@ -26,11 +26,15 @@ public class SplashScreen extends javax.swing.JFrame {
      */
     public SplashScreen() {
         initComponents();
-         AWTUtilities.setWindowOpaque(this, false);
+        
+        
+        AWTUtilities.setWindowOpaque(this, false);
         this.setIconImage(new ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/logo.png")).getImage());
         this.setLocationRelativeTo(null);
         this.progreso.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         startThread();
+        
+        
 //        
     }
 
@@ -67,41 +71,28 @@ public class SplashScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        progreso = new javax.swing.JProgressBar();
         texto = new javax.swing.JLabel();
+        progreso = new javax.swing.JProgressBar();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setPreferredSize(new java.awt.Dimension(800, 520));
+        getContentPane().setLayout(null);
+
+        texto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        texto.setForeground(new java.awt.Color(0, 204, 255));
+        texto.setText("Cargando Componentes..");
+        getContentPane().add(texto);
+        texto.setBounds(0, 440, 651, 44);
+        getContentPane().add(progreso);
+        progreso.setBounds(0, 490, 1008, 39);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/splash.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
-
-        texto.setText("Cargando Componentes..");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(progreso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(texto, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(347, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 399, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(texto, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(progreso, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1010, 530);
         jLabel1.getAccessibleContext().setAccessibleName("");
 
         pack();
