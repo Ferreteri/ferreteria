@@ -14,6 +14,7 @@ public class Ventas extends javax.swing.JFrame {
     /**
      * Creates new form Ventas
      */
+    //ijijij
     public Ventas() {
         initComponents();
     }
