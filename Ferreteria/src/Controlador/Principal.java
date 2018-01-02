@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Vista.Principal;
+package Controlador;
 
+import Vista.Principal.SplashScreen;
 import static java.awt.image.ImageObserver.ERROR;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
@@ -13,7 +14,7 @@ import javax.swing.UIManager;
  *
  * @author sistema
  */
-public class Correr {
+public class Principal {
      public static void main(String[] args) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
