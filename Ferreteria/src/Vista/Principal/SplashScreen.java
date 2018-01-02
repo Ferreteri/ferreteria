@@ -30,7 +30,7 @@ public class SplashScreen extends javax.swing.JFrame {
         
         AWTUtilities.setWindowOpaque(this, false);
         //setUndecorated(false); 
-        this.setIconImage(new ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/logo.png")).getImage());
+        this.setIconImage(new ImageIcon(getClass().getResource("/Recursos/Imagenes/SplashScreen/logo.png")).getImage());
         this.setLocationRelativeTo(null);
         this.progreso.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         startThread();
