@@ -92,7 +92,7 @@ public class SplashScreen extends javax.swing.JFrame {
         getContentPane().add(progreso);
         progreso.setBounds(0, 390, 840, 39);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/splash.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Imagenes/SplashScreen/splash.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(jLabel1);
