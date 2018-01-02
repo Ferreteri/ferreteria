@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ferreteria.Principal;
+package Vista.Principal;
 
 /**
  *
@@ -76,7 +76,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(310, 0, 250, 44);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\hpere\\Desktop\\ol.png")); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(240, 240));
         jLabel1.setMinimumSize(new java.awt.Dimension(240, 240));
         jPanel1.add(jLabel1);

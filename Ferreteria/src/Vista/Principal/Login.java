@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ferreteria.Principal;
+package Vista.Principal;
 
 //import javax.swing.ImageIcon;
 
+import Utilerias.EstatusInfo;
+import Utilerias.Numerosaletras;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -37,6 +39,13 @@ public class Login extends javax.swing.JFrame {
         this.setIconImage(new ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/logo.png")).getImage());
         this.setTitle("ACCESO - SISTEMA FERRETERIA");
         
+                //prueba de enunmeradores  
+                        int ss;
+                        String sss;
+                        //ss=MenuPrincipal.ventas.value;
+                        ss = EstatusInfo.MenuPrincipal.Ventas.ordinal();
+                        ss = EstatusInfo.MenuPrincipal.Info.ordinal();
+                        sss= Numerosaletras.converLetras(ss);
     }
 
     
@@ -87,7 +96,6 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(395, 50));
         getContentPane().setLayout(null);
 
         jLabel1.setText("Nombre usuario");
@@ -133,8 +141,6 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(contraseña);
         contraseña.setBounds(140, 168, 132, 20);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\hpere\\Desktop\\Ferreteria\\ferreteria\\Ferreteria\\xl3.jpg")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 420, 370);
 
@@ -205,6 +211,12 @@ public class Login extends javax.swing.JFrame {
                             dato = rs3.getString(1);
                         }
                         dispose();
+                                                
+                        
+                        
+                      
+                        
+                        
                         //MenuPrincipalNor mp = new MenuPrincipalNor();
                         JOptionPane.showMessageDialog(this, "BIENVENIDO A SIENSA " + dato, "Normal", 0,
                                 new ImageIcon(getClass().getResource("/imagenes/principal/norm.png")));

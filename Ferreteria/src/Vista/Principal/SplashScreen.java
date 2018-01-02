@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ferreteria.Principal;
+package Vista.Principal;
 
 
 import com.sun.awt.AWTUtilities;
@@ -29,6 +29,7 @@ public class SplashScreen extends javax.swing.JFrame {
         
         
         AWTUtilities.setWindowOpaque(this, false);
+        //setUndecorated(false); 
         this.setIconImage(new ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/logo.png")).getImage());
         this.setLocationRelativeTo(null);
         this.progreso.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
@@ -77,6 +78,7 @@ public class SplashScreen extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(800, 520));
         getContentPane().setLayout(null);
 
@@ -84,15 +86,17 @@ public class SplashScreen extends javax.swing.JFrame {
         texto.setForeground(new java.awt.Color(0, 204, 255));
         texto.setText("Cargando Componentes..");
         getContentPane().add(texto);
-        texto.setBounds(0, 440, 651, 44);
+        texto.setBounds(0, 340, 651, 44);
+
+        progreso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(progreso);
-        progreso.setBounds(0, 490, 1008, 39);
+        progreso.setBounds(0, 390, 840, 39);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/Imagenes/Principal/splash.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1010, 530);
+        jLabel1.setBounds(0, 0, 810, 530);
         jLabel1.getAccessibleContext().setAccessibleName("");
 
         pack();

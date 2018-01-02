@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ferreteria.Principal;
+package Vista.Principal;
 
 import static java.awt.image.ImageObserver.ERROR;
 import javax.swing.JOptionPane;

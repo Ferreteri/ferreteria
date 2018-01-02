@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ferreteria.Principal;
+package Vista.Principal;
 
 /**
  *
@@ -34,7 +34,6 @@ public class Inventario extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(590, 470));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
@@ -59,15 +58,13 @@ public class Inventario extends javax.swing.JFrame {
         jScrollPane1.setBounds(61, 145, 441, 275);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\hpere\\Desktop\\roni.png")); // NOI18N
         jLabel2.setText("FERRE DE RONI");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(181, 14, 214, 97);
+        jLabel2.setBounds(181, 14, 214, 22);
         jLabel2.getAccessibleContext().setAccessibleName("");
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\hpere\\Desktop\\Ferreteria\\ferreteria\\Ferreteria\\imagenes\\inventario.jpg")); // NOI18N
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 14, 800, 320);
+        jLabel3.setBounds(10, 14, 0, 0);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
