@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo.Conexon;
+package Modelo.Conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,10 +14,10 @@ import java.sql.SQLException;
  * @author sistema
  */
 public class Conexion {
-     static String bd = "codejavu";
-   static String login = "root";
-   static String password = "";
-   static String url = "jdbc:mysql://localhost/"+bd;
+     static String bd = "DBFerre2018";
+   static String login = "javierVV";
+   static String password = "F4x8.l_%@Rn%";
+   static String url = "jdbc:mysql://23.229.181.103/"+bd;
 
    Connection conn = null;
 

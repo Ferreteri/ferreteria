@@ -5,27 +5,44 @@
  */
 package Controlador;
 
-import Vista.Principal.SplashScreen;
+
 import static java.awt.image.ImageObserver.ERROR;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+
+
+import Modelo.Logica;
+import Vista.Principal.SplashScreen;
+import Vista.Principal.Login;
+import Vista.Principal.MenuPrincipal;
+
+
 
 /**
  *
  * @author sistema
  */
 public class Principal {
+    
+    
+        Logica miLogica;
+	SplashScreen frmSplashScreen;
+	Login frmLogin;
+	MenuPrincipal frmMenuPrincipal;
+	Coordinator ClassCoordinator;
+        
+        
      public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-                } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null, "Error en en Look and Feel", "Error", ERROR);
-                }
-                new SplashScreen().setVisible(true);
-            }
-        });
+         Principal CargaMenu=new Principal();
+		CargaMenu.iniciar();
      }
+     
+     
+     private void iniciar() {
+		/*Se instancian las clases*/
+		frmSplashScreen=new SplashScreen();
+	}
+
+     
+     
 }

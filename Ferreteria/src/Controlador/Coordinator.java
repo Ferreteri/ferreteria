@@ -9,7 +9,11 @@ package Controlador;
 import Modelo.Logica;
 import Modelo.DAO.UsuariosDAO;
 import Modelo.VO.UsuariosVO;
+import Vista.Principal.SplashScreen;
 import Vista.Principal.Login;
+import Vista.Principal.MenuPrincipal;
+
+
 
 
 
@@ -18,5 +22,11 @@ import Vista.Principal.Login;
  * @author sistema
  */
 public class Coordinator {
-    
+        private Logica miLogica;
+	private SplashScreen frmSplashScreen;
+        
+        public SplashScreen getfrmSplashScreen() {
+		return frmSplashScreen;
+	}
+        
 }

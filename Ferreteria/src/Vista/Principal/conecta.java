@@ -19,7 +19,7 @@ public class conecta {
     public Connection conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conect = DriverManager.getConnection("jdbc:mysql://localhost/ferreteria", "root", "root"); 
+            conect = DriverManager.getConnection("jdbc:mysql://23.229.181.103/DBFerre2018", "javierVV", "F4x8.l_%@Rn%"); 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error en la conexión" + e);
         }
